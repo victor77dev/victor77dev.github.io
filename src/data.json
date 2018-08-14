@@ -1,0 +1,158 @@
+{
+  "site": {
+    "name": "Victor Wu"
+  },
+  "profile": {
+    "name": "Victor Wu",
+    "fullName": "King Ching WU",
+    "image": "profile",
+    "email": "hkvictor77@gmail.com",
+    "github": "victor77dev",
+    "githubLink": "https://github.com/victor77dev",
+    "description": [
+      "Software Developer",
+      "Interested in web development, image/video processing and machine learning"
+    ]
+  },
+  "workExp": [
+    {
+      "title": "Graduate Engineer (Graduate Test Automation Analyst)",
+      "info": "Amino Technologies (HK) Limited (Entone)",
+      "time": "May 2016 - Apr 2018",
+      "description": [
+        "Major Tasks:",
+        "WebPage testing using Selenium, Nodejs;",
+        "Daily testing system using Jenkins;",
+        "Emulate home monitor camera for stress test;",
+        "Analyze captured video and audio from set top box"
+      ],
+      "tags": [ "C++", "Python", "Jenkins", "Selenium", "Robot Framework", "TestLink", "Video & Audio Analysis", "Continuous Integration" ]
+    },
+    {
+      "title": "Teaching Assistant (Course Tutor during Postgraduate Study)",
+      "info": " Information engineering department, The Chinese University of Hong Kong (CUHK)",
+      "time": "Sep 2012 - Jun 2014",
+      "description": [
+        "Courses:",
+        "Web Programming and Security: Basic website development using Amazon EC2 and basic public key algorithms concept",
+        "Information & Software Engineering Practice: Programming in C#"
+      ],
+      "tags": [ "C#", "PHP", "Javascript", "jQuery", "Amazon EC2" ]
+    },
+    {
+      "title": "Software engineering Internship",
+      "info": "Hong Kong Tramways, Limited",
+      "time": "Jun 2012 - Aug 2014",
+      "description": [
+        "Major Task:",
+        "Develop internal management website"
+      ],
+      "tags": [ "ASP.Net", "MS SQL" ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Master of Philosophy in Information Engineering",
+      "info": "The Chinese University of Hong Kong (CUHK)",
+      "time": "2012 - 2016",
+      "description": [
+        "Research Area:",
+        "Video Streaming Algorithms",
+        "Mobible Network Bandwidth Analysis"
+      ],
+      "tags": [ "Video Streaming", "Mobile Network", "Streaming Algorithms", "C++", "Python", "Big Data" ]
+    },
+    {
+      "title": "Bachelor of Science in Mathematics, Bachelor of Engineering in Information Engineering",
+      "info": "The Chinese University of Hong Kong (CUHK)",
+      "time": "Sep 2008 - Jun 2012",
+      "tags": [ "Linear Algebra", "Graph Theory", "Image Processing", "Web Programming" ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "ReLinks",
+      "info": "Scholarly Literature Searching Platform",
+      "image": "relinks",
+      "link": "https://victor77dev.github.io/relinks-client",
+      "github": [
+        "https://github.com/victor77dev/relinks-server",
+        "https://github.com/victor77dev/relinks-client"
+      ],
+      "description": [
+        "A platform providing Linkages of Research papers.",
+        "Aim to help scholars, especially newcomers and scholars researching in new areas, by extracting relations and comments from papers."
+      ],
+      "tags": [ "Express", "Node.js", "MongoDB", "Mongoose", "React", "React-Saga", "Redux", "React Boilerplate",
+        "Material UI", "Pdf Js", "arXiv", "Research", "Searching Platform"
+      ]
+    },
+    {
+      "title": "302 Projects (Found Projects)",
+      "info": "Visualization of Projects Searching",
+      "image": "302projects",
+      "link": "https://victor77dev.github.io/302projects",
+      "github": [
+        "https://github.com/victor77dev/302projects"
+      ],
+      "description": [
+        "A platform for searching and visualizing of existing projects.",
+        "Aim to help developers to find their interested projects by providing better visualization of existing projects."
+      ],
+      "tags": [ "React", "Vis.js", "React-Saga", "Redux", "React Boilerplate",
+        "Visualization", "Searching Platform"
+      ]
+    },
+    {
+      "title": "Login System",
+      "info": "User Login and Registration System",
+      "image": "loginSystem",
+      "link": "https://victor77dev.github.io/login_system",
+      "github": [
+        "https://github.com/victor77dev/login_system"
+      ],
+      "description": [
+        "A Login and Registration authentication system.",
+        "Created using Express, React, Passport.js and JsonWebToken (JWT)."
+      ],
+      "tags": [ "React", "Express", "Passport.js", "JsonWebToken (JWT)", "MongoDB", "Bcrypt", "Redux-Form", "Redux-Thunk", "Authentication" ]
+    },
+    {
+      "title": "Touch 25",
+      "info": "React & Redux Game",
+      "image": "touch25",
+      "link": "https://victor77dev.github.io/touch25",
+      "github": [
+        "https://github.com/victor77dev/touch25"
+      ],
+      "description": [
+        "A simple game timing how fast you clicked from 1 to 25. Created using React + Material UI."
+      ],
+      "tags": [ "React", "Redux", "Material UI", "Redux-Thunk", "Game" ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Mobile Video Streaming with Video Quality and Streaming Performance Guarantees",
+      "info": "WiMob 2015",
+      "publications": [
+        "https://ieeexplore.ieee.org/document/7348000"
+      ],
+      "description": [
+        "Quality Guarantees Mobile Video Streaming Algorithm based on Network 3G throughput trace data analysis"
+      ],
+      "tags": [ "Mobile Video Streaming Algorithms", "Video Quality", "Streaming Performance" ]
+    },
+    {
+      "title": "Exploiting Trace Data for Adaptive Mobile Video Streaming with Performance Guarantees",
+      "info": "BigMM 2016",
+      "publications": [
+        "https://www.computer.org/csdl/proceedings/bigmm/2016/2179/00/2179a089-abs.html"
+      ],
+      "description": [
+        "Quality Guarantees Mobile Video Adaptive Streaming Algorithm based on Network 3G throughput trace data analysis"
+      ],
+      "tags": [ "Mobile Video Streaming Algorithms", "Adaptive Streaming", "Video Quality", "Streaming Performance" ]
+    }
+  ]
+}
