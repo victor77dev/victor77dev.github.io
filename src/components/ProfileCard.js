@@ -12,14 +12,6 @@ import EmailIcon from '@material-ui/icons/Email';
 
 import GithubIcon from '../images/GithubIcon.svg';
 
-const imageImport = require.context('../images/', false, /\.(png|jpe?g)$/);
-const imageList = imageImport.keys().reduce((list, key) => {
-  const updateList = list;
-  const keyName = key.replace('./', '').replace(/\.(png|jpe?g)/, '');
-  updateList[keyName] = imageImport(key);
-  return updateList;
-}, {});
-
 const mobileWidth = 700;
 
 const styles = (theme) => ({
@@ -51,7 +43,7 @@ const styles = (theme) => ({
 
 class ProfileCard extends React.Component {
   render() {
-    const { classes, profile } = this.props;
+    const { classes, profile, imageList } = this.props;
     const { name, fullName, image, description, email, github, githubLink } = profile;
     return (
       <Card raised className={classes.card}>
@@ -100,6 +92,7 @@ class ProfileCard extends React.Component {
 ProfileCard.propTypes = {
   profile: PropTypes.object,
   classes: PropTypes.object,
+  imageList: PropTypes.object,
 };
 
 export default withStyles(styles)(ProfileCard);

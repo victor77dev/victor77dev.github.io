@@ -12,6 +12,14 @@ import Header from '../components/Header';
 import ProfileCard from '../components/ProfileCard';
 import SessionCard from '../components/SessionCard';
 
+const imageImport = require.context('../images/', false, /\.(png|jpe?g|svg|gif)$/);
+const imageList = imageImport.keys().reduce((list, key) => {
+  const updateList = list;
+  const keyName = key.replace('./', '').replace(/\.(png|jpe?g|svg|gif)/, '');
+  updateList[keyName] = imageImport(key);
+  return updateList;
+}, {});
+
 const theme = createMuiTheme({
   palette: {
     primary: blue,
@@ -45,23 +53,23 @@ class Page extends React.Component {
           >
             <a name="" className={classes.anchor}> </a>
             <GridListTile>
-              <ProfileCard profile={profile}/>
+              <ProfileCard profile={profile} imageList={imageList} />
             </GridListTile>
             <a name="workExp" className={classes.anchor}> </a>
             <GridListTile>
-              <SessionCard title="Work Experience" infoData={workExp} />
+              <SessionCard title="Work Experience" infoData={workExp} imageList={imageList} />
             </GridListTile>
               <a name="edu" className={classes.anchor}> </a>
             <GridListTile>
-              <SessionCard title="Education" infoData={education} />
+              <SessionCard title="Education" infoData={education} imageList={imageList} />
             </GridListTile>
             <a name="projects" className={classes.anchor}> </a>
             <GridListTile>
-              <SessionCard title="Projects" infoData={projects} />
+              <SessionCard title="Projects" infoData={projects} imageList={imageList} />
             </GridListTile>
             <a name="publications" className={classes.anchor}> </a>
             <GridListTile>
-              <SessionCard title="Publications" infoData={publications} />
+              <SessionCard title="Publications" infoData={publications} imageList={imageList} />
             </GridListTile>
           </GridList>
         </Grid>

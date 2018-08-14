@@ -11,14 +11,6 @@ import DateIcon from '@material-ui/icons/DateRange';
 import SchoolIcon from '@material-ui/icons/School';
 import GithubIcon from '../images/GithubIcon.svg';
 
-const imageImport = require.context('../images/', false, /\.(png|jpe?g|svg|gif)$/);
-const imageList = imageImport.keys().reduce((list, key) => {
-  const updateList = list;
-  const keyName = key.replace('./', '').replace(/\.(png|jpe?g|svg|gif)/, '');
-  updateList[keyName] = imageImport(key);
-  return updateList;
-}, {});
-
 const mobileWidth = 700;
 
 const styles = (theme) => ({
@@ -53,15 +45,15 @@ const styles = (theme) => ({
 });
 
 const ImageContent = (props) => {
-  const { classes, image, title, link } = props;
+  const { classes, image, title, link, imageList } = props;
   if (link && image) {
     return (
       <a href={link} target="_blank" className={classes.link} >
         {
           image &&
           <CardMedia
-            className={window.innerWidth > mobileWidth ? classes.media: classes.mediaMobile}
-            image={imageList[window.innerWidth > mobileWidth ? image: `${image}_mobile`]}
+            className={window.innerWidth > mobileWidth ? classes.media : classes.mediaMobile}
+            image={imageList[window.innerWidth > mobileWidth ? image : `${image}_mobile`]}
             title={title}
           />
         }
@@ -99,7 +91,7 @@ ImageContent.propTypes = {
 
 class InfoCard extends React.Component {
   render() {
-    const { classes, data } = this.props;
+    const { classes, data, imageList } = this.props;
     const { title, info, time, image, description, tags, link, publications, github } = data;
     return (
       <Card raised className={classes.card}>
@@ -119,7 +111,7 @@ class InfoCard extends React.Component {
           }
         >
         </CardHeader>
-        <ImageContent classes={classes} image={image} title={title} link={link} />
+        <ImageContent classes={classes} image={image} title={title} link={link} imageList={imageList} />
         {
           publications &&
           publications.map((data, index) => (
@@ -172,6 +164,7 @@ class InfoCard extends React.Component {
 InfoCard.propTypes = {
   data: PropTypes.object,
   classes: PropTypes.object,
+  imageList: PropTypes.object,
 };
 
 export default withStyles(styles)(InfoCard);

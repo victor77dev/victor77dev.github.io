@@ -18,7 +18,7 @@ const styles = (theme) => ({
 
 class SessionCard extends React.Component {
   render() {
-    const { title, infoData, classes } = this.props;
+    const { title, infoData, classes, imageList } = this.props;
     return (
       <Card raised className={classes.card}>
         <CardHeader
@@ -33,7 +33,7 @@ class SessionCard extends React.Component {
               infoData &&
               infoData.map((data, index) => (
                 <GridListTile key={`${title}_${index}`}>
-                  <InfoCard data={data} />
+                  <InfoCard data={data} imageList={imageList} />
                 </GridListTile>
               ))
             }
@@ -48,5 +48,6 @@ SessionCard.propTypes = {
   title: PropTypes.string,
   infoData: PropTypes.array,
   classes: PropTypes.object,
+  imageList: PropTypes.object,
 };
 export default withStyles(styles)(SessionCard);
