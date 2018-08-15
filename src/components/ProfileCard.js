@@ -54,7 +54,11 @@ class ProfileCard extends React.Component {
           title={name}
           subheader={fullName}
         />
-        <img rel="preload" src={imageList[window.innerWidth > mobileWidth ? image: `${image}_mobile`]} className={classes.preload} />
+        <img rel="preload"
+          alt="preload_profile"
+          src={imageList[window.innerWidth > mobileWidth ? image: `${image}_mobile`]}
+          className={classes.preload}
+        />
         <CardMedia
           className={classes.media}
           image={imageList[window.innerWidth > mobileWidth ? image: `${image}_mobile`]}
