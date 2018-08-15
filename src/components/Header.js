@@ -22,15 +22,6 @@ class Header extends React.Component {
     if (value !== this.state.value)
       this.setState({ value });
   };
-  componentWillUpdate(nextProps, nextState) {
-    console.log(nextProps)
-    console.log(nextState)
-  }
-  componentDidUpdate() {
-    console.log('did update')
-    console.log(this.props)
-    console.log(this.state)
-  }
 
   render() {
     const { value } = this.state;
