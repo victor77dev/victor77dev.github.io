@@ -127,11 +127,28 @@ class InfoCard extends React.Component {
           description &&
           <CardContent>
             {
-              description.map((data, index) => (
-                <Typography component="p" key={`${title}_des_${index}`}>
-                  {data}
-                </Typography>
-              ))
+              description.map((data, index) => {
+                if (Array.isArray(data)) {
+                  return (
+                    <ul key={`${title}_des_${index}`}>
+                      {
+                        data.map((listData, listIndex) => (
+                          <Typography component="p" key={`${title}_des_${index}_list_${listIndex}`}>
+                            <li>
+                              {listData}
+                            </li>
+                          </Typography>
+                        ))
+                      }
+                    </ul>
+                  );
+                }
+                return (
+                  <Typography component="p" key={`${title}_des_${index}`}>
+                    {data}
+                  </Typography>
+                );
+              })
             }
           </CardContent>
         }

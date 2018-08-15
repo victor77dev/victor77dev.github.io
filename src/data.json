@@ -21,10 +21,12 @@
       "time": "May 2016 - Apr 2018",
       "description": [
         "Major Tasks:",
-        "WebPage testing using Selenium, Nodejs;",
-        "Daily testing system using Jenkins;",
-        "Emulate home monitor camera for stress test;",
-        "Analyze captured video and audio from set top box"
+        [
+          "WebPage testing using Selenium, Nodejs;",
+          "Daily testing system using Jenkins;",
+          "Emulate home monitor camera for stress test;",
+          "Analyze captured video and audio from set top box"
+        ]
       ],
       "tags": [ "C++", "Python", "Jenkins", "Selenium", "Robot Framework", "TestLink", "Video & Audio Analysis", "Continuous Integration" ]
     },
@@ -34,8 +36,10 @@
       "time": "Sep 2012 - Jun 2014",
       "description": [
         "Courses:",
-        "Web Programming and Security: Basic website development using Amazon EC2 and basic public key algorithms concept",
-        "Information & Software Engineering Practice: Programming in C#"
+        [
+          "Web Programming and Security: Basic website development using Amazon EC2 and basic public key algorithms concept",
+          "Information & Software Engineering Practice: Programming in C#"
+        ]
       ],
       "tags": [ "C#", "PHP", "Javascript", "jQuery", "Amazon EC2" ]
     },
@@ -45,7 +49,9 @@
       "time": "Jun 2012 - Aug 2014",
       "description": [
         "Major Task:",
-        "Develop internal management website"
+        [
+          "Develop internal management website"
+        ]
       ],
       "tags": [ "ASP.Net", "MS SQL" ]
     }
@@ -57,8 +63,10 @@
       "time": "2012 - 2016",
       "description": [
         "Research Area:",
-        "Video Streaming Algorithms",
-        "Mobible Network Bandwidth Analysis"
+        [
+          "Video Streaming Algorithms",
+          "Mobible Network Bandwidth Analysis"
+        ]
       ],
       "tags": [ "Video Streaming", "Mobile Network", "Streaming Algorithms", "C++", "Python", "Big Data" ]
     },
