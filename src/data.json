@@ -121,7 +121,7 @@
       ],
       "description": [
         "A Login and Registration authentication system.",
-        "Created using Express, React, Passport.js and JsonWebToken (JWT)."
+        "Created using Express, React, MongoDB, Passport.js and JsonWebToken (JWT)."
       ],
       "tags": [ "React", "Express", "Passport.js", "JsonWebToken (JWT)", "MongoDB", "Bcrypt", "Redux-Form", "Redux-Thunk", "Authentication" ]
     },
