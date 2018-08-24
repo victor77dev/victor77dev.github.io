@@ -30,9 +30,12 @@ const theme = createMuiTheme({
 const styles = {
   grid: {
     background: blueGrey[700],
+    maxWidth: 'calc(1080px + 16px * 2)',
+    margin: '0 auto',
+    padding: '0 16px',
   },
-  flex: {
-    flexGrow: 1,
+  gridList: {
+    minWidth: 240,
   },
   anchor: {
     marginTop: -68,
@@ -50,6 +53,7 @@ class Page extends React.Component {
           <GridList
             cols={1}
             cellHeight="auto"
+            className={classes.gridList}
           >
             <a name="" className={classes.anchor}> </a>
             <GridListTile>
