@@ -23,6 +23,43 @@ class Header extends React.Component {
       this.setState({ value });
   };
 
+  setTabPos(tabPos) {
+    const { value } = this.state;
+    let updateValue = 0;
+    switch(tabPos) {
+      case 'profile':
+        updateValue = 0;
+        break;
+      case 'workExp':
+        updateValue = 1;
+        break;
+      case 'edu':
+        updateValue = 2;
+        break;
+      case 'projects':
+        updateValue = 3;
+        break;
+      case 'publications':
+        updateValue = 4;
+        break;
+      default:
+        updateValue = 0;
+    }
+    if (value !== updateValue) {
+      this.setState({ value: updateValue });
+    }
+  }
+
+  componentDidMount() {
+    const { tabPos } = this.props;
+    this.setTabPos(tabPos);
+  }
+
+  componentWillUpdate(nextProps) {
+    const { tabPos } = nextProps;
+    this.setTabPos(tabPos);
+  }
+
   render() {
     const { value } = this.state;
     const { site, classes } = this.props;
@@ -55,6 +92,7 @@ class Header extends React.Component {
 Header.propTypes = {
   site: PropTypes.object,
   classes: PropTypes.object,
+  tabPos: PropTypes.string,
 };
 
 export default withStyles(styles)(Header);

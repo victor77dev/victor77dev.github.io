@@ -43,12 +43,39 @@ const styles = {
 };
 
 class Page extends React.Component {
+  state = {
+    tabPos: '',
+    sessionPos: {},
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const offsetPos = window.scrollY + 79; // offset for App Bar
+    const { sessionPos } = this.state;
+    if (offsetPos < sessionPos['workExp']) this.setState({tabPos: 'profile'}); else
+    if (offsetPos < sessionPos['edu']) this.setState({tabPos: 'workExp'}); else
+    if (offsetPos < sessionPos['projects']) this.setState({tabPos: 'edu'}); else
+    if (offsetPos < sessionPos['publications']) this.setState({tabPos: 'projects'}); else
+    this.setState({tabPos: 'publications'});
+  }
+
+  updateRef = (name, element) => {
+    if (element) {
+      const position = element.getBoundingClientRect().top + window.scrollY;
+      const { sessionPos } = this.state;
+      sessionPos[name] = position;
+    }
+  }
+
   render() {
     const { data, classes } = this.props;
     const { site, profile, workExp, education, projects, publications } = data;
     return (
       <MuiThemeProvider theme={theme}>
-        <Header site={site} />
+        <Header site={site} tabPos={this.state.tabPos} />
         <Grid container justify="center" className={classes.grid}>
           <GridList
             cols={1}
@@ -57,23 +84,33 @@ class Page extends React.Component {
           >
             <a name="" className={classes.anchor}> </a>
             <GridListTile>
-              <ProfileCard profile={profile} imageList={imageList} />
+              <div ref={this.updateRef.bind(this, 'profile')}>
+                <ProfileCard profile={profile} imageList={imageList} />
+              </div>
             </GridListTile>
             <a name="workExp" className={classes.anchor}> </a>
             <GridListTile>
-              <SessionCard title="Work Experience" infoData={workExp} imageList={imageList} />
+              <div ref={this.updateRef.bind(this, 'workExp')}>
+                <SessionCard title="Work Experience" infoData={workExp} imageList={imageList} />
+              </div>
             </GridListTile>
               <a name="edu" className={classes.anchor}> </a>
             <GridListTile>
-              <SessionCard title="Education" infoData={education} imageList={imageList} />
+              <div ref={this.updateRef.bind(this, 'edu')}>
+                <SessionCard title="Education" infoData={education} imageList={imageList} />
+              </div>
             </GridListTile>
             <a name="projects" className={classes.anchor}> </a>
             <GridListTile>
-              <SessionCard title="Projects" infoData={projects} imageList={imageList} />
+              <div ref={this.updateRef.bind(this, 'projects')}>
+                <SessionCard title="Projects" infoData={projects} imageList={imageList} />
+              </div>
             </GridListTile>
             <a name="publications" className={classes.anchor}> </a>
             <GridListTile>
-              <SessionCard title="Publications" infoData={publications} imageList={imageList} />
+              <div ref={this.updateRef.bind(this, 'publications')}>
+                <SessionCard title="Publications" infoData={publications} imageList={imageList} />
+              </div>
             </GridListTile>
           </GridList>
         </Grid>
