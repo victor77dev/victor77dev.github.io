@@ -75,7 +75,7 @@ class Header extends React.Component {
               value={value}
               onChange={this.handleChange}
               scrollable
-              scrollButtons="on"
+              scrollButtons="off"
             >
               <Tab label="Home" href="#" />
               <Tab label="Work Experience" href="#workExp" />
