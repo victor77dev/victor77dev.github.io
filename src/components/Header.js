@@ -6,6 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Scroll from 'react-scroll';
 
 const styles = {
   flex: {
@@ -50,6 +51,12 @@ class Header extends React.Component {
     }
   }
 
+  goToSession(session) {
+    const { sessionPos } = this.props;
+    const offsetPos = sessionPos[session] - 79; // offset for App Bar
+    Scroll.animateScroll.scrollTo(offsetPos);
+  }
+
   componentDidMount() {
     const { tabPos } = this.props;
     this.setTabPos(tabPos);
@@ -77,11 +84,11 @@ class Header extends React.Component {
               scrollable
               scrollButtons="off"
             >
-              <Tab label="Home" href="#" />
-              <Tab label="Work Experience" href="#workExp" />
-              <Tab label="Education" href="#edu" />
-              <Tab label="Projects" href="#projects" />
-              <Tab label="Publications" href="#publications" />
+              <Tab label="Home" onClick={this.goToSession.bind(this, 'profile')} />
+              <Tab label="Work Experience" onClick={this.goToSession.bind(this, 'workExp')} />
+              <Tab label="Education" onClick={this.goToSession.bind(this, 'edu')} />
+              <Tab label="Projects" onClick={this.goToSession.bind(this, 'projects')} />
+              <Tab label="Publications" onClick={this.goToSession.bind(this, 'publications')} />
             </Tabs>
           </Toolbar>
         </AppBar>
@@ -93,6 +100,7 @@ Header.propTypes = {
   site: PropTypes.object,
   classes: PropTypes.object,
   tabPos: PropTypes.string,
+  sessionPos: PropTypes.object,
 };
 
 export default withStyles(styles)(Header);

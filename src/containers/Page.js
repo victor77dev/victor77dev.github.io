@@ -72,10 +72,11 @@ class Page extends React.Component {
 
   render() {
     const { data, classes } = this.props;
+    const { tabPos, sessionPos } = this.state;
     const { site, profile, workExp, education, projects, publications } = data;
     return (
       <MuiThemeProvider theme={theme}>
-        <Header site={site} tabPos={this.state.tabPos} />
+        <Header site={site} tabPos={tabPos} sessionPos={sessionPos} />
         <Grid container justify="center" className={classes.grid}>
           <GridList
             cols={1}
