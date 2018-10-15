@@ -62,19 +62,38 @@
       "info": "The Chinese University of Hong Kong (CUHK)",
       "time": "2012 - 2016",
       "description": [
+        "Research Focus:",
+        [
+          "Improving Video Streaming Performance on Mobile Devices"
+        ],
         "Research Area:",
         [
           "Video Streaming Algorithms",
-          "Mobible Network Bandwidth Analysis"
+          "Analysis on Mobible Network Bandwidth"
+        ],
+        "Research Projects:",
+        [
+          "Competing traffic performance of video streaming algorithms on mobile devices",
+          "Performance guarantees video streaming algorithms",
+          "Mobile network bandwidth analysis"
+        ],
+        "Course Projects:",
+        [
+          "Gender recognition on voice based on machine learning algorithm"
+        ],
+        "Research Publications:",
+        [
+          "Mobile Video Streaming with Video Quality and Streaming Performance Guarantees (WiMob 2015)",
+          "Exploiting Trace Data for Adaptive Mobile Video Streaming with Performance Guarantees (BigMM 2016)"
         ]
       ],
-      "tags": [ "Video Streaming", "Mobile Network", "Streaming Algorithms", "C++", "Python", "Big Data" ]
+      "tags": [ "Video Streaming", "Mobile Network", "Streaming Algorithms", "Game Theory", "ns-2 (Network Simulator)", "C++", "Python", "MATLAB", "Big Data", "Machine Learning", "SVM" ]
     },
     {
       "title": "Bachelor of Science in Mathematics, Bachelor of Engineering in Information Engineering",
       "info": "The Chinese University of Hong Kong (CUHK)",
       "time": "Sep 2008 - Jun 2012",
-      "tags": [ "Linear Algebra", "Graph Theory", "Image Processing", "Web Programming" ]
+      "tags": [ "Linear Algebra", "Graph Theory", "Game Theory", "Image Processing", "Web Programming" ]
     }
   ],
   "projects": [
